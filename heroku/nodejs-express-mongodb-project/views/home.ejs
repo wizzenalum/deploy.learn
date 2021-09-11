@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>deploy successfully</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Hey Hey ......... man you did it ......</h1>
+    <h2>
+      you have deployed
+      <a href="http://wizzenalum.github.io/">wizzenalum</a> dumy project to the
+      heroku server. you can add few names here and those will be directly added
+      to the database. try it.
+    </h2>
+    <h1>Name list</h1>
+    <table>
+      <% for(var i of name_list) { %>
+      <tr id="c<%= i %>">
+        <td><%= i.name %></td>
+      </tr>
+      <% } %>
+    </table>
+    <form action="/create-contact" method="post">
+      <input
+        type="text"
+        id="item1"
+        name="name"
+        placeholder="Enter name"
+        required
+      />
+      <button id="add" type="submit">Add</button>
+    </form>
+
+    <script type="text/javascript" src="JavaScript.js"></script>
+  </body>
+</html>
