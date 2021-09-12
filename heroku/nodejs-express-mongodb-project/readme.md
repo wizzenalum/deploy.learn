@@ -25,15 +25,23 @@ npm --version\
 git --version
 ```
 
-## 2. install heroku cli by
+## 2. Login heroku by cli
 
-This is heroku CLI tool help use to do everything like push, login, view log etc it will make sense first install heroku.
+This is heroku CLI tool help use to do everything like push, login, view log etc it will make sense.
+
+- first install heroku cli if you dont have.
 
 ```go
 sudo snap install heroku --classic
 ```
 
-Now login by following command
+- check version if you have
+
+```go
+heroku -v
+```
+
+- Now login by following command
 
 ```go
 heroku login
@@ -44,6 +52,8 @@ heroku login
 1. application repo
 2. buid the proc file
 3. declare app dependencies
+4. adding mongoose to cloud server of mongodb-atlas
+5. run application locally
 
 #### application repo
 
@@ -80,6 +90,10 @@ Heroku recognizes an app as Node.js by the existence of a package.json file in t
 ```go
 npm init --yes
 ```
+
+#### adding mongoose to cloud server of mongodb-atlas
+
+[follow-this]() or follow official [atlas-docs](https://docs.atlas.mongodb.com/getting-started/) and get the url that will be placed in mongoose.connect(url) option.
 
 #### run app locally
 
