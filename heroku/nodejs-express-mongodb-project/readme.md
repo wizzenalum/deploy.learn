@@ -3,7 +3,7 @@
 # follow these steps to deploy node js application
 
 1. What it assume you have already
-2. Istalling heroku CLI
+2. Installing heroku CLI
 3. prepare your application
 4. deploy your application
 5. view logs and scale it.
@@ -54,7 +54,7 @@ git clone https://github.com/wizzenalum/deploy.learn
 ```
 
 ```go
-cd heroku/nodejs-express-project/
+cd deploy.learn/heroku/nodejs-express-mongodb-project/
 ```
 
 ```go
@@ -69,12 +69,17 @@ Your app should now be running on [localhost:5000](http://localhost:5000/)
 
 #### build proc file
 
-Procfile is a text file in the root directory of your application, to explicitly declare what command should be executed to start your app. see basic in example.
+Procfile is a text file in the root directory of your application, to explicitly declare what command should be executed to start your app.
+you already have it look at it.
 [more](https://devcenter.heroku.com/articles/procfile)
 
 #### Declare app dependencies
 
-Heroku recognizes an app as Node.js by the existence of a package.json file in the root directory. For your own apps, you can create one by running npm init --yes.
+Heroku recognizes an app as Node.js by the existence of a package.json file in the root directory. For your own apps, you can create one by running...
+
+```go
+npm init --yes
+```
 
 #### run app locally
 
@@ -88,20 +93,42 @@ terminalte by CTL+C
 
 ## deploy your application
 
-```sh
+1. make git repository by following commands
+
+```go
+git init
+git add .
+git commit -m "initial commit"
+```
+
+2. create heroku app using following command or you can create from dashbord.
+
+```go
 heroku create <app name>
 ```
 
-to build the applicaiton
+3. clone git source code. follow this step if you created app from dashbord else it will be created automatically
 
-```sh
-git push heroku main
+```go
+heroku git:clone -a <app name>
 ```
 
-The application is now deployed. Ensure that at least one instance of the app is running:
+4. build the applicaiton
 
-```sh
+```go
+git push heroku master
+```
+
+5. The application is now deployed. Ensure that at least one instance of the app is running:
+
+```go
 heroku ps:scale web=1
+```
+
+6. start application at heroku.
+
+```go
+heroku open
 ```
 
 ## view logs and scale it
