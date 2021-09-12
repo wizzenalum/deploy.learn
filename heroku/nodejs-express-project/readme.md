@@ -18,22 +18,30 @@ node --version
 ```
 
 ```go
-npm --version\
+npm --version
 ```
 
 ```go
 git --version
 ```
 
-## 2. install heroku cli by
+## 2. Login heroku by cli
 
-This is heroku CLI tool help use to do everything like push, login, view log etc it will make sense first install heroku.
+This is heroku CLI tool help use to do everything like push, login, view log etc it will make sense.
+
+- first install heroku cli if you don't have.
 
 ```go
 sudo snap install heroku --classic
 ```
 
-Now login by following command
+- check version if you have
+
+```go
+heroku -v
+```
+
+- Now login by following command
 
 ```go
 heroku login
@@ -44,6 +52,7 @@ heroku login
 1. application repo
 2. buid the proc file
 3. declare app dependencies
+4. run application locally
 
 #### application repo
 

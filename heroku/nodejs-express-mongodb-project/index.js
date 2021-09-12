@@ -2,8 +2,10 @@ const express = require("express");
 const PORT = process.env.PORT || 5000;
 
 const mongoose = require("mongoose");
-
 const Name = mongoose.model("Name", new mongoose.Schema({ name: String }));
+
+// uncomment next comment and place your uri here remove all the < jkf> nad replace it with correctone.
+// const url ="mongodb+srv://<user-name>:<password>@<cluster-name>.wszdb.mongodb.net/<name-database>?retryWrites=true&w=majority";
 
 mongoose.connect("mongodb://localhost/test-app", {
   useNewUrlParser: true,

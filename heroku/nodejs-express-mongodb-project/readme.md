@@ -18,7 +18,7 @@ node --version
 ```
 
 ```go
-npm --version\
+npm --version
 ```
 
 ```go
@@ -29,7 +29,7 @@ git --version
 
 This is heroku CLI tool help use to do everything like push, login, view log etc it will make sense.
 
-- first install heroku cli if you dont have.
+- first install heroku cli if you don't have.
 
 ```go
 sudo snap install heroku --classic
@@ -71,12 +71,6 @@ cd deploy.learn/heroku/nodejs-express-mongodb-project/
 npm install
 ```
 
-```go
-npm start
-```
-
-Your app should now be running on [localhost:5000](http://localhost:5000/)
-
 #### build proc file
 
 Procfile is a text file in the root directory of your application, to explicitly declare what command should be executed to start your app.
@@ -93,7 +87,8 @@ npm init --yes
 
 #### adding mongoose to cloud server of mongodb-atlas
 
-[follow-this]() or follow official [atlas-docs](https://docs.atlas.mongodb.com/getting-started/) and get the url that will be placed in mongoose.connect(url) option.
+[follow-this]() or follow official [atlas-docs](https://docs.atlas.mongodb.com/getting-started/) and get the uri
+as you get it place in index.js file in your project.
 
 #### run app locally
 
@@ -102,6 +97,8 @@ before deploy we can check will this app work or not on heroku by running it loc
 ```go
 heroku local web
 ```
+
+Your app should now be running on [localhost:5000](http://localhost:5000/)
 
 terminalte by CTL+C
 
