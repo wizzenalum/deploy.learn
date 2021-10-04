@@ -55,7 +55,7 @@ heroku login
 4. adding mongoose to cloud server of mongodb-atlas
 5. run application locally
 
-#### application repo
+#### 1. application repo
 
 i recomend you to use this dummy and follow the step. at first don't risk your application. so clone and start the application.
 
@@ -71,13 +71,13 @@ cd deploy.learn/heroku/nodejs-express-mongodb-project/
 npm install
 ```
 
-#### build proc file
+#### 2. build proc file
 
 Procfile is a text file in the root directory of your application, to explicitly declare what command should be executed to start your app.
 you already have it look at it.
 [more](https://devcenter.heroku.com/articles/procfile)
 
-#### Declare app dependencies
+#### 3. Declare app dependencies
 
 Heroku recognizes an app as Node.js by the existence of a package.json file in the root directory. For your own apps, you can create one by running...
 
@@ -85,12 +85,12 @@ Heroku recognizes an app as Node.js by the existence of a package.json file in t
 npm init --yes
 ```
 
-#### adding mongoose to cloud server of mongodb-atlas
+### 4. adding mongoose to cloud server of mongodb-atlas
 
 [follow-this]() or follow official [atlas-docs](https://docs.atlas.mongodb.com/getting-started/) and get the uri
 as you get it place in index.js file in your project.
 
-#### run app locally
+#### 5. run app locally
 
 before deploy we can check will this app work or not on heroku by running it locally
 
@@ -102,7 +102,7 @@ Your app should now be running on [localhost:5000](http://localhost:5000/)
 
 terminalte by CTL+C
 
-## deploy your application
+## 4. deploy your application
 
 1. make git repository by following commands
 
@@ -142,7 +142,7 @@ heroku ps:scale web=1
 heroku open
 ```
 
-## view logs and scale it
+## 5. view logs and scale it
 
 #### view logs
 
@@ -162,7 +162,7 @@ heroku ps:scale web=0
 heroku ps:scale web=1
 ```
 
-## pushing the local changes
+## 6. pushing the local changes
 
 1. make changes and commit the code in git.
 
