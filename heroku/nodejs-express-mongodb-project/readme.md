@@ -121,7 +121,7 @@ heroku create <app name>
 3. clone git source code. follow this step if you created app from dashbord else it will be created automatically
 
 ```go
-heroku git:clone -a <app name>
+heroku git:remote -a <app name>
 ```
 
 4. build the applicaiton
